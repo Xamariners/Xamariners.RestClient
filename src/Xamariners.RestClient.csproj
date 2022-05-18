@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>Xamariners.RestClient</AssemblyName>
+    <RootNamespace>Xamariners.RestClient</RootNamespace>
+    <Authors>Xamariners, Ben Ishiyama-Levy</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Company>Xamariners</Company>
+    <Description>Batteries included Rest Client for Xamarin</Description>
+    <Copyright>Xamariners</Copyright>
+    <PackageLicenseFile>License.txt</PackageLicenseFile>
+    <PackageIconUrl>https://secure.gravatar.com/avatar/28c15140779074ab382bd0749c83388c</PackageIconUrl>
+    <RepositoryUrl>https://github.com/Xamariners/XamarinersPackages</RepositoryUrl>
+    <Version>1.2.1</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IdentityModel" Version="5.1.0" />
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.41.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.1" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Xamariners.RestClient.Helpers" Version="0.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Licenses\License.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Licenses\License.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+</Project>
